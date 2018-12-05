@@ -2,7 +2,7 @@ FROM alpine:latest
 
 LABEL MAINTAINER="beginor <beginor@qq.com>"
 
-RUN apk update && apk add tinyproxy && rm -rf /car/cache/apk
+RUN apk add --no-cache --update tinyproxy
 
 ADD ./tinyproxy.conf /etc/tinyproxy/tinyproxy.conf
 
